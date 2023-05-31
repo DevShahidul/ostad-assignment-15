@@ -38,7 +38,7 @@ class ProductController extends Controller
         $product = new Product($validatedData);
         $product->save();
 
-        return redirect()->route('product.index');
+        return redirect()->route('products.index');
     }
 
     /**
@@ -48,7 +48,7 @@ class ProductController extends Controller
     {
         $product = Product::findOrFail($id);
 
-        return view('product.show', ['product' => $product]);
+        return view('products.show', ['product' => $product]);
     }
 
     /**
