@@ -21,3 +21,9 @@ Route::get('/', function () {
 Route::get('/home', function () {
     return redirect('/dashboard');
 });
+
+Route::get('/dashboard', function(){
+    return "Welcome to Dahsboard";
+});
+
+// Route::redirect('/home', '/dashboard', 302);
